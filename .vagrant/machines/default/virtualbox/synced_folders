@@ -1,0 +1,1 @@
+{"virtualbox":{"/home/vagrant/shared":{"guestpath":"/home/vagrant/shared","hostpath":"/home/daniel/vm/docker-compose-node","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"/home/daniel/vm/docker-compose-node","disabled":false,"__vagrantfile":true}}}
