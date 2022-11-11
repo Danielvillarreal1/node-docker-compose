@@ -19,8 +19,10 @@ services:
     volumes:
       - datadb:/var/lib/mysql
       - database:/docker-entrypoint-initdb.d
-    networks:
-      - enve-net
+   # networks:
+   #   - enve-net
+   #  links:
+   #  - app    
     deploy:
       resources:
         limits:
@@ -38,9 +40,11 @@ services:
     ports:
       - "3000:3000"
     depends_on:
-      - db
-    networks:
-      - enve-net
+      - db    
+   # networks:
+   #   - enve-net
+    links:
+      - db    
     restart: on-failure
     deploy:
       resources:
@@ -49,5 +53,5 @@ services:
 volumes:
   datadb: 
   database:
-networks:
-  enve-net:
+#networks:
+#  enve-net:
